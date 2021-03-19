@@ -88,3 +88,16 @@ Then, start the serving!
 torchserve --start --ts-config config.properties --model-store model_store \
 --models mrc=mrc.mar
 ```
+
+## Inference
+
+You can write up your inference in a text file as:
+```
+<question>|<context>
+```
+
+Then, send the request to the server as:
+
+```
+curl -X POST http://<server>:<port>/predictions/mrc -T file.txt
+```
