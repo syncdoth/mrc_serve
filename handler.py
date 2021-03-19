@@ -18,6 +18,7 @@ from ts.torch_handler.base_handler import BaseHandler
 
 logger = logging.getLogger(__name__)
 
+DATA_PATH = "absolute path to the mrc_model folder"
 
 class MRCHandler(BaseHandler, ABC):
     """
@@ -39,7 +40,7 @@ class MRCHandler(BaseHandler, ABC):
         x = hub_utils.from_pretrained(
             model_dir,
             "model.pt",
-            "/localdata/schoiaj/repos/mrc_serve/mrc_model",
+            DATA_PATH,
             load_checkpoint_heads=True
         )
         model_interface = BrainRobertaHubInterface(

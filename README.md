@@ -51,9 +51,9 @@ mv ~/.pororo/tokenizers/bpe32.ko/* mrc_model
 ## Modify handler.py
 
 As because of some conflicts in the fairseq repo, you have to set the data path
-manually. Go to line 42 of `handler.py` file, and change the path to the absolute
-path to the folder that you store pretrained checkpoints (the folder you created
-in the above step).
+manually. Go to line 21 of `handler.py` file, and change the global variable
+`DATA_PATH` to the absolute path to the folder that you store pretrained
+checkpoints (the folder you created in the above step).
 
 ## create model archive
 

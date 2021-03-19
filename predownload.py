@@ -12,10 +12,6 @@ import torch
 ckpt_dir = download_or_load("bert/brainbert.base.ko.korquad", "ko")
 tok_path = download_or_load(f"tokenizers/bpe32k.ko.zip", "ko")
 
-# ckpt_dir = "/root/.pororo/bert/brainbert.base.ko.korquad"
-# tok_path = "/root/.pororo/tokenizers/bpe32k.ko"
-
-
 x = hub_utils.from_pretrained(
     ckpt_dir,
     "model.pt",
