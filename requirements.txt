@@ -1,0 +1,4 @@
+pororo
+python-mecab-ko
+torchserve
+torch-model-archiver
